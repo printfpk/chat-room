@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useUser } from '../context/UserContext';
 import { Send, Reply, X, Smile } from 'lucide-react';
 import './CommentSection.css';

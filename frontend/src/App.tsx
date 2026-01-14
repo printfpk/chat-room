@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import VideoSection from './components/VideoSection';
 import CommentSection from './components/CommentSection';
 import VoiceSeats from './components/VoiceSeats';

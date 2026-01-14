@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Play, Video as VideoIcon, AlertTriangle } from 'lucide-react';
 import './VideoSection.css';
 

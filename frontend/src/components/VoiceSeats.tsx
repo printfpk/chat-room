@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useUser } from '../context/UserContext';
 import { useWebRTC } from '../hooks/useWebRTC';
 import { Mic, MicOff, UserPlus, X } from 'lucide-react';
@@ -15,7 +15,7 @@ const AudioStream = ({ stream }: { stream: MediaStream }) => {
     return <audio ref={audioRef} autoPlay />;
 };
 
-const Seat = ({ id, isActive, onPress, name, isSelf }: { id: string | number, isActive: boolean, onPress: () => void, name: string, isSelf: boolean }) => {
+const Seat = ({ isActive, onPress, name, isSelf }: { isActive: boolean, onPress: () => void, name: string, isSelf: boolean }) => {
     return (
         <div className="seat-container">
             <div className="ring-container">
@@ -100,7 +100,7 @@ export default function VoiceSeats() {
                 {seats.map((seat) => (
                     <Seat
                         key={seat.id}
-                        id={seat.id}
+
                         name={seat.name}
                         isSelf={seat.isSelf}
                         isActive={activeSeat === seat.id}
