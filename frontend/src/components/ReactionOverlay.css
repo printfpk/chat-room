@@ -1,0 +1,43 @@
+.reaction-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    /* Let clicks pass through */
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.floating-emoji {
+    position: absolute;
+    bottom: 0;
+    font-size: 3rem;
+    animation: floatUp 2s ease-out forwards;
+    opacity: 0;
+}
+
+@media (max-width: 600px) {
+    .floating-emoji {
+        font-size: 2rem;
+        /* Smaller on mobile */
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.2);
+    }
+
+    100% {
+        transform: translateY(-80vh) scale(1);
+        opacity: 0;
+    }
+}

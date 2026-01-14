@@ -1,0 +1,229 @@
+.voice-seats-section {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.voice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.voice-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.invite-icon-btn {
+    background: transparent;
+    color: var(--primary-color);
+    padding: 4px;
+}
+
+.invite-icon-btn:hover {
+    color: var(--primary-hover);
+}
+
+.seats-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.seat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22%;
+    min-width: 60px;
+}
+
+@media (max-width: 480px) {
+    .seats-grid {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .seat-container {
+        width: 45%;
+        /* 2 per row */
+    }
+}
+
+.ring-container {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.seat-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #444;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.seat-avatar.is-self {
+    border: 2px solid var(--primary-color);
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.seat-name {
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.pulsing-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    opacity: 0.3;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    padding: 20px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-header button {
+    background: transparent;
+    padding: 4px;
+    color: white;
+}
+
+.online-count {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    margin: 0 0 16px 0;
+}
+
+.users-list {
+    overflow-y: auto;
+}
+
+.user-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.u-name {
+    font-weight: 500;
+}
+
+.u-status {
+    font-size: 0.8em;
+    color: #4CAF50;
+}
+
+.invite-btn {
+    background-color: var(--primary-color);
+    padding: 6px 12px;
+    font-size: 0.9em;
+    border-radius: 20px;
+}
+
+.invite-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.no-users {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
