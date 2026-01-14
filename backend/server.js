@@ -22,7 +22,7 @@ const io = new Server(server, {
 // Initialize Socket.io Logic
 socketHandler(io);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const IP_ADDRESS = ip.address();
 
 server.listen(PORT, '0.0.0.0', () => {
